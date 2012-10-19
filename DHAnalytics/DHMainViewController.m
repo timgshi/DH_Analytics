@@ -74,6 +74,10 @@
 
 - (void)didAuth:(NSString *)token {
     [[PFUser currentUser] setObject:token forKey:@"instagram"];
+    [[PFUser currentUser] saveInBackground];
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
+
+
 
 @end

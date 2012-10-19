@@ -61,7 +61,7 @@
 -(void) didAuth:(NSString*)token
 {
     [self.authDelegate didAuth:token];
-    self.completionBlock();
+//    self.completionBlock();
 }
 
 -(void) frameChanged:(CGRect)frame

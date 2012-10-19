@@ -70,7 +70,7 @@
 
     NSString *scopeStr = @"scope=likes+comments+relationships";
     
-    NSString *url = [NSString stringWithFormat:@"https://api.instagram.com/oauth/authorize/?client_id=%@&display=touch&%@&redirect_uri=http://buza.mitplw.com&response_type=code", INSTAGRAM_CLIENT_ID, scopeStr];
+    NSString *url = [NSString stringWithFormat:@"https://api.instagram.com/oauth/authorize/?client_id=%@&display=touch&%@&redirect_uri=%@&response_type=token", INSTAGRAM_CLIENT_ID, scopeStr, INSTAGRAM_CALLBACK_BASE];
     
     [self loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
 }
@@ -88,35 +88,42 @@
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
-    NSString *responseURL = [request.URL absoluteString];
-    
-    NSString *urlCallbackPrefix = [NSString stringWithFormat:@"%@/?code=", INSTAGRAM_CALLBACK_BASE];
-    
-    //We received the code, now request the auth token from Instagram.
-    if([responseURL hasPrefix:urlCallbackPrefix])
-    {
-        NSString *authToken = [responseURL substringFromIndex:[urlCallbackPrefix length]];
-
-        NSURL *url = [NSURL URLWithString:@"https://api.instagram.com/oauth/access_token"];
-
-        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
-        
-        NSDictionary *paramDict = [NSDictionary dictionaryWithObjectsAndKeys:authToken, @"code", INSTAGRAM_CALLBACK_BASE, @"redirect_uri", @"authorization_code", @"grant_type",  INSTAGRAM_CLIENT_ID, @"client_id",  INSTAGRAM_CLIENT_SECRET, @"client_secret", nil];
-        
-        NSString *paramString = [paramDict urlEncodedString];
-        
-        NSString *charset = (NSString *)CFStringConvertEncodingToIANACharSetName(CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding));
-        
-        [request setHTTPMethod:@"POST"];
-        [request addValue:[NSString stringWithFormat:@"application/x-www-form-urlencoded; charset=%@",charset] forHTTPHeaderField:@"Content-Type"];
-        [request setHTTPBody:[paramString dataUsingEncoding:NSUTF8StringEncoding]];
-        
-        self.tokenRequestConnection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-        
-        [self.tokenRequestConnection start];
-        
+    NSURL *requestURL = request.URL;
+    if ([[requestURL scheme] isEqualToString:@"dhanalytics"]) {
+        NSString *fragment = [requestURL fragment];
+        NSString *token = [fragment substringFromIndex:[@"access_token=" length]];
+        [self.authDelegate didAuth:token];
         return NO;
     }
+//    NSString *responseURL = [request.URL absoluteString];
+//    
+//    NSString *urlCallbackPrefix = [NSString stringWithFormat:@"%@/?code=", INSTAGRAM_CALLBACK_BASE];
+//    
+//    //We received the code, now request the auth token from Instagram.
+//    if([responseURL hasPrefix:urlCallbackPrefix])
+//    {
+//        NSString *authToken = [responseURL substringFromIndex:[urlCallbackPrefix length]];
+//
+//        NSURL *url = [NSURL URLWithString:@"https://api.instagram.com/oauth/access_token"];
+//
+//        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+//        
+//        NSDictionary *paramDict = [NSDictionary dictionaryWithObjectsAndKeys:authToken, @"code", INSTAGRAM_CALLBACK_BASE, @"redirect_uri", @"authorization_code", @"grant_type",  INSTAGRAM_CLIENT_ID, @"client_id",  INSTAGRAM_CLIENT_SECRET, @"client_secret", nil];
+//        
+//        NSString *paramString = [paramDict urlEncodedString];
+//        
+//        NSString *charset = (NSString *)CFStringConvertEncodingToIANACharSetName(CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding));
+//        
+//        [request setHTTPMethod:@"POST"];
+//        [request addValue:[NSString stringWithFormat:@"application/x-www-form-urlencoded; charset=%@",charset] forHTTPHeaderField:@"Content-Type"];
+//        [request setHTTPBody:[paramString dataUsingEncoding:NSUTF8StringEncoding]];
+//        
+//        self.tokenRequestConnection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+//        
+//        [self.tokenRequestConnection start];
+//        
+//        return NO;
+//    }
     
 	return YES;
 }

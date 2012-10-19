@@ -60,7 +60,7 @@
 			<string>dhanalytics</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>dhanalytics://</string>
+				<string>dhanalytics</string>
 			</array>
 		</dict>
 		<dict>
@@ -68,7 +68,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb383720358362823://</string>
+				<string>fb383720358362823</string>
 			</array>
 		</dict>
 	</array>
@@ -98,5 +98,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>FacebookAppID</key>
+	<string>383720358362823</string>
 </dict>
 </plist>

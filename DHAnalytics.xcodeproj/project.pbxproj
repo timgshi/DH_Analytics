@@ -54,6 +54,8 @@
 		4B9860B116313FF300EB1109 /* NSDictionary+UrlEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9860A916313FF300EB1109 /* NSDictionary+UrlEncoding.m */; };
 		4B9860B216313FF300EB1109 /* SizerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9860AB16313FF300EB1109 /* SizerView.m */; };
 		4B9860B316313FF300EB1109 /* SizerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9860AB16313FF300EB1109 /* SizerView.m */; };
+		4BB266FB1631F1620086D6DD /* DHInstagramHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB266FA1631F1620086D6DD /* DHInstagramHelper.m */; };
+		4BB266FC1631F1620086D6DD /* DHInstagramHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB266FA1631F1620086D6DD /* DHInstagramHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +121,8 @@
 		4B9860AA16313FF300EB1109 /* SizerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SizerView.h; sourceTree = "<group>"; };
 		4B9860AB16313FF300EB1109 /* SizerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SizerView.m; sourceTree = "<group>"; };
 		4B9860B51631401900EB1109 /* IGDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGDefines.h; sourceTree = "<group>"; };
+		4BB266F91631F1620086D6DD /* DHInstagramHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHInstagramHelper.h; sourceTree = "<group>"; };
+		4BB266FA1631F1620086D6DD /* DHInstagramHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHInstagramHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +229,8 @@
 				4B986051163130A200EB1109 /* DHViewController.m */,
 				4B98609C1631385500EB1109 /* DHMainViewController.h */,
 				4B98609D1631385500EB1109 /* DHMainViewController.m */,
+				4BB266F91631F1620086D6DD /* DHInstagramHelper.h */,
+				4BB266FA1631F1620086D6DD /* DHInstagramHelper.m */,
 				4B9860B41631400500EB1109 /* Instagram-Auth-iOS */,
 				4B98603C163130A200EB1109 /* Supporting Files */,
 			);
@@ -399,6 +405,7 @@
 				4B9860AE16313FF300EB1109 /* InstagramAuthenticatorView.m in Sources */,
 				4B9860B016313FF300EB1109 /* NSDictionary+UrlEncoding.m in Sources */,
 				4B9860B216313FF300EB1109 /* SizerView.m in Sources */,
+				4BB266FB1631F1620086D6DD /* DHInstagramHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +419,7 @@
 				4B9860AF16313FF300EB1109 /* InstagramAuthenticatorView.m in Sources */,
 				4B9860B116313FF300EB1109 /* NSDictionary+UrlEncoding.m in Sources */,
 				4B9860B316313FF300EB1109 /* SizerView.m in Sources */,
+				4BB266FC1631F1620086D6DD /* DHInstagramHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,6 +611,7 @@
 				4B98606C163130A200EB1109 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4B98606D163130A200EB1109 /* Build configuration list for PBXNativeTarget "DHAnalyticsTests" */ = {
 			isa = XCConfigurationList;
@@ -611,6 +620,7 @@
 				4B98606F163130A200EB1109 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

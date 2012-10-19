@@ -12,6 +12,7 @@
 #define PARSE_APP_ID @"G1rjWspxnoeF72Qxf6LddyhHqEzlaY51cMuq66TR"
 #define PARSE_KEY @"yc4lJvF4VoRFDdD6g6qcAYBLGugq6TGWjWeSnDUp"
 #define GAN_TRACKING_ID @"UA-35695361-1"
+#define FB_APP_ID @"383720358362823"
 
 static const NSInteger kGANDispatchPeriodSec = 10;
 
@@ -21,11 +22,21 @@ static const NSInteger kGANDispatchPeriodSec = 10;
 {
     [Parse setApplicationId:PARSE_APP_ID
                   clientKey:PARSE_KEY];
+    [PFFacebookUtils initializeWithApplicationId:FB_APP_ID];
     [TestFlight takeOff:TEST_FLIGHT_TEAM_TOKEN];
     [[GANTracker sharedTracker] startTrackerWithAccountID:GAN_TRACKING_ID dispatchPeriod:kGANDispatchPeriodSec delegate:nil];
     return YES;
 }
-							
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return [PFFacebookUtils handleOpenURL:url];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [PFFacebookUtils handleOpenURL:url];
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
