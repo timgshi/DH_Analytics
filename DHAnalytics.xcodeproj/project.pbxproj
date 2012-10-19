@@ -44,6 +44,8 @@
 		4B986095163134C700EB1109 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B986094163134C700EB1109 /* libGoogleAnalytics.a */; };
 		4B986096163134CC00EB1109 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B986094163134C700EB1109 /* libGoogleAnalytics.a */; };
 		4B986097163134D100EB1109 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9860901631343800EB1109 /* libz.dylib */; };
+		4B98609E1631385500EB1109 /* DHMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B98609D1631385500EB1109 /* DHMainViewController.m */; };
+		4B98609F1631385500EB1109 /* DHMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B98609D1631385500EB1109 /* DHMainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,8 @@
 		4B9860901631343800EB1109 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		4B986093163134C700EB1109 /* GANTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GANTracker.h; sourceTree = "<group>"; };
 		4B986094163134C700EB1109 /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics.a; sourceTree = "<group>"; };
+		4B98609C1631385500EB1109 /* DHMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHMainViewController.h; sourceTree = "<group>"; };
+		4B98609D1631385500EB1109 /* DHMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHMainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +206,8 @@
 				4B98604D163130A200EB1109 /* MainStoryboard.storyboard */,
 				4B986050163130A200EB1109 /* DHViewController.h */,
 				4B986051163130A200EB1109 /* DHViewController.m */,
+				4B98609C1631385500EB1109 /* DHMainViewController.h */,
+				4B98609D1631385500EB1109 /* DHMainViewController.m */,
 				4B98603C163130A200EB1109 /* Supporting Files */,
 			);
 			path = DHAnalytics;
@@ -354,6 +360,7 @@
 				4B986042163130A200EB1109 /* main.m in Sources */,
 				4B986046163130A200EB1109 /* DHAppDelegate.m in Sources */,
 				4B986052163130A200EB1109 /* DHViewController.m in Sources */,
+				4B98609E1631385500EB1109 /* DHMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B986067163130A200EB1109 /* DHAnalyticsTests.m in Sources */,
+				4B98609F1631385500EB1109 /* DHMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
