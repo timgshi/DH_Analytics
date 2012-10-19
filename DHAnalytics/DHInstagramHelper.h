@@ -10,4 +10,6 @@
 
 @interface DHInstagramHelper : NSObject
 
++ (NSDictionary *)requestWithMethod:(NSString *)method andParameters:(NSDictionary *)paramDict;
+
 @end

@@ -9,6 +9,7 @@
 #import "DHMainViewController.h"
 
 #import "InstagramAuthenticatorView.h"
+#import "DHInstagramHelper.h"
 
 @interface DHMainViewController () <PFLogInViewControllerDelegate, InstagramAuthDelegate>
 
@@ -43,10 +44,12 @@
                                 | PFLogInFieldsFacebook
                                 | PFLogInFieldsTwitter;
         [self.navigationController presentViewController:loginVC animated:YES completion:nil];
-    } else if (![[PFUser currentUser] objectForKey:@"instagram"]) {
+    } else if (![[PFUser currentUser] objectForKey:@"instagram-token"]) {
         InstagramAuthController *igVC = [[InstagramAuthController alloc] init];
         igVC.authDelegate = self;
         [self.navigationController presentViewController:igVC animated:YES completion:nil];
+    } else if (![[PFUser currentUser] objectForKey:@"instagram-id"]) {
+//        [self loadInstagramUserData];
     }
 }
 
@@ -73,11 +76,22 @@
 #pragma mark - InstagramAuthDelegate Methods
 
 - (void)didAuth:(NSString *)token {
-    [[PFUser currentUser] setObject:token forKey:@"instagram"];
-    [[PFUser currentUser] saveInBackground];
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    [[PFUser currentUser] setObject:token forKey:@"instagram_token"];
+    [[PFUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        [self loadInstagramUserData];
+    }];
 }
 
-
+- (void)loadInstagramUserData {
+    NSDictionary *userDict = [DHInstagramHelper requestWithMethod:@"users/self" andParameters:nil];
+    NSDictionary *userData = [userDict objectForKey:@"data"];
+    PFUser *currentUser = [PFUser currentUser];
+    if (!userData || !currentUser) return;
+    [currentUser setObject:[userData objectForKey:@"id"] forKey:@"instagram_id"];
+    [currentUser setObject:[userData objectForKey:@"username"] forKey:@"instagram_username"];
+    [currentUser saveEventually];
+    NSLog(@"%@", userDict);
+}
 
 @end

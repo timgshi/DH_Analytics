@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "DH": {
+            "applicationId": "G1rjWspxnoeF72Qxf6LddyhHqEzlaY51cMuq66TR", 
+            "masterKey": "Qvu70i4JassMs99wvWU69oPkxK9mc6Rm7kPZHiZc"
+        }, 
+        "_default": {
+            "link": "DH"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.1.6"
+    }
+}
