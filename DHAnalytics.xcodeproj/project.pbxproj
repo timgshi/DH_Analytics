@@ -23,6 +23,8 @@
 		4B98605C163130A200EB1109 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B986037163130A200EB1109 /* Foundation.framework */; };
 		4B986064163130A200EB1109 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B986062163130A200EB1109 /* InfoPlist.strings */; };
 		4B986067163130A200EB1109 /* DHAnalyticsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B986066163130A200EB1109 /* DHAnalyticsTests.m */; };
+		4B986071163130D700EB1109 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B986070163130D700EB1109 /* Parse.framework */; };
+		4B986072163130D700EB1109 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B986070163130D700EB1109 /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,7 @@
 		4B986063163130A200EB1109 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4B986065163130A200EB1109 /* DHAnalyticsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHAnalyticsTests.h; sourceTree = "<group>"; };
 		4B986066163130A200EB1109 /* DHAnalyticsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHAnalyticsTests.m; sourceTree = "<group>"; };
+		4B986070163130D700EB1109 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,7 @@
 				4B986036163130A200EB1109 /* UIKit.framework in Frameworks */,
 				4B986038163130A200EB1109 /* Foundation.framework in Frameworks */,
 				4B98603A163130A200EB1109 /* CoreGraphics.framework in Frameworks */,
+				4B986071163130D700EB1109 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +82,7 @@
 				4B98605A163130A200EB1109 /* SenTestingKit.framework in Frameworks */,
 				4B98605B163130A200EB1109 /* UIKit.framework in Frameworks */,
 				4B98605C163130A200EB1109 /* Foundation.framework in Frameworks */,
+				4B986072163130D700EB1109 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +111,7 @@
 		4B986034163130A200EB1109 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4B986070163130D700EB1109 /* Parse.framework */,
 				4B986035163130A200EB1109 /* UIKit.framework */,
 				4B986037163130A200EB1109 /* Foundation.framework */,
 				4B986039163130A200EB1109 /* CoreGraphics.framework */,
@@ -375,6 +381,10 @@
 		4B98606B163130A200EB1109 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DHAnalytics/DHAnalytics-Prefix.pch";
 				INFOPLIST_FILE = "DHAnalytics/DHAnalytics-Info.plist";
@@ -386,6 +396,10 @@
 		4B98606C163130A200EB1109 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DHAnalytics/DHAnalytics-Prefix.pch";
 				INFOPLIST_FILE = "DHAnalytics/DHAnalytics-Info.plist";
@@ -401,6 +415,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DHAnalytics/DHAnalytics-Prefix.pch";
@@ -418,6 +433,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DHAnalytics/DHAnalytics-Prefix.pch";
