@@ -46,6 +46,14 @@
 		4B986097163134D100EB1109 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9860901631343800EB1109 /* libz.dylib */; };
 		4B98609E1631385500EB1109 /* DHMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B98609D1631385500EB1109 /* DHMainViewController.m */; };
 		4B98609F1631385500EB1109 /* DHMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B98609D1631385500EB1109 /* DHMainViewController.m */; };
+		4B9860AC16313FF300EB1109 /* InstagramAuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9860A516313FF300EB1109 /* InstagramAuthController.m */; };
+		4B9860AD16313FF300EB1109 /* InstagramAuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9860A516313FF300EB1109 /* InstagramAuthController.m */; };
+		4B9860AE16313FF300EB1109 /* InstagramAuthenticatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9860A716313FF300EB1109 /* InstagramAuthenticatorView.m */; };
+		4B9860AF16313FF300EB1109 /* InstagramAuthenticatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9860A716313FF300EB1109 /* InstagramAuthenticatorView.m */; };
+		4B9860B016313FF300EB1109 /* NSDictionary+UrlEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9860A916313FF300EB1109 /* NSDictionary+UrlEncoding.m */; };
+		4B9860B116313FF300EB1109 /* NSDictionary+UrlEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9860A916313FF300EB1109 /* NSDictionary+UrlEncoding.m */; };
+		4B9860B216313FF300EB1109 /* SizerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9860AB16313FF300EB1109 /* SizerView.m */; };
+		4B9860B316313FF300EB1109 /* SizerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9860AB16313FF300EB1109 /* SizerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +110,15 @@
 		4B986094163134C700EB1109 /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics.a; sourceTree = "<group>"; };
 		4B98609C1631385500EB1109 /* DHMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHMainViewController.h; sourceTree = "<group>"; };
 		4B98609D1631385500EB1109 /* DHMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHMainViewController.m; sourceTree = "<group>"; };
+		4B9860A416313FF300EB1109 /* InstagramAuthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramAuthController.h; sourceTree = "<group>"; };
+		4B9860A516313FF300EB1109 /* InstagramAuthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramAuthController.m; sourceTree = "<group>"; };
+		4B9860A616313FF300EB1109 /* InstagramAuthenticatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramAuthenticatorView.h; sourceTree = "<group>"; };
+		4B9860A716313FF300EB1109 /* InstagramAuthenticatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramAuthenticatorView.m; sourceTree = "<group>"; };
+		4B9860A816313FF300EB1109 /* NSDictionary+UrlEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+UrlEncoding.h"; sourceTree = "<group>"; };
+		4B9860A916313FF300EB1109 /* NSDictionary+UrlEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+UrlEncoding.m"; sourceTree = "<group>"; };
+		4B9860AA16313FF300EB1109 /* SizerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SizerView.h; sourceTree = "<group>"; };
+		4B9860AB16313FF300EB1109 /* SizerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SizerView.m; sourceTree = "<group>"; };
+		4B9860B51631401900EB1109 /* IGDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +225,7 @@
 				4B986051163130A200EB1109 /* DHViewController.m */,
 				4B98609C1631385500EB1109 /* DHMainViewController.h */,
 				4B98609D1631385500EB1109 /* DHMainViewController.m */,
+				4B9860B41631400500EB1109 /* Instagram-Auth-iOS */,
 				4B98603C163130A200EB1109 /* Supporting Files */,
 			);
 			path = DHAnalytics;
@@ -244,6 +262,22 @@
 				4B986062163130A200EB1109 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4B9860B41631400500EB1109 /* Instagram-Auth-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4B9860B51631401900EB1109 /* IGDefines.h */,
+				4B9860A416313FF300EB1109 /* InstagramAuthController.h */,
+				4B9860A516313FF300EB1109 /* InstagramAuthController.m */,
+				4B9860A616313FF300EB1109 /* InstagramAuthenticatorView.h */,
+				4B9860A716313FF300EB1109 /* InstagramAuthenticatorView.m */,
+				4B9860A816313FF300EB1109 /* NSDictionary+UrlEncoding.h */,
+				4B9860A916313FF300EB1109 /* NSDictionary+UrlEncoding.m */,
+				4B9860AA16313FF300EB1109 /* SizerView.h */,
+				4B9860AB16313FF300EB1109 /* SizerView.m */,
+			);
+			name = "Instagram-Auth-iOS";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +395,10 @@
 				4B986046163130A200EB1109 /* DHAppDelegate.m in Sources */,
 				4B986052163130A200EB1109 /* DHViewController.m in Sources */,
 				4B98609E1631385500EB1109 /* DHMainViewController.m in Sources */,
+				4B9860AC16313FF300EB1109 /* InstagramAuthController.m in Sources */,
+				4B9860AE16313FF300EB1109 /* InstagramAuthenticatorView.m in Sources */,
+				4B9860B016313FF300EB1109 /* NSDictionary+UrlEncoding.m in Sources */,
+				4B9860B216313FF300EB1109 /* SizerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +408,10 @@
 			files = (
 				4B986067163130A200EB1109 /* DHAnalyticsTests.m in Sources */,
 				4B98609F1631385500EB1109 /* DHMainViewController.m in Sources */,
+				4B9860AD16313FF300EB1109 /* InstagramAuthController.m in Sources */,
+				4B9860AF16313FF300EB1109 /* InstagramAuthenticatorView.m in Sources */,
+				4B9860B116313FF300EB1109 /* NSDictionary+UrlEncoding.m in Sources */,
+				4B9860B316313FF300EB1109 /* SizerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
