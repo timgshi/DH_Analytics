@@ -50,4 +50,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - PFLoginViewControllerDelegate Methods
+
+- (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)logInViewController:(PFLogInViewController *)logInController didFailToLogInWithError:(NSError *)error {
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController {
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end
