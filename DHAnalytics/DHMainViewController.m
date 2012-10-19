@@ -8,7 +8,9 @@
 
 #import "DHMainViewController.h"
 
-@interface DHMainViewController () <PFLogInViewControllerDelegate>
+#import "InstagramAuthenticatorView.h"
+
+@interface DHMainViewController () <PFLogInViewControllerDelegate, InstagramAuthDelegate>
 
 @end
 
@@ -41,6 +43,10 @@
                                 | PFLogInFieldsFacebook
                                 | PFLogInFieldsTwitter;
         [self.navigationController presentViewController:loginVC animated:YES completion:nil];
+    } else if (![[PFUser currentUser] objectForKey:@"instagram"]) {
+        InstagramAuthController *igVC = [[InstagramAuthController alloc] init];
+        igVC.authDelegate = self;
+        [self.navigationController presentViewController:igVC animated:YES completion:nil];
     }
 }
 
@@ -62,6 +68,12 @@
 
 - (void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController {
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - InstagramAuthDelegate Methods
+
+- (void)didAuth:(NSString *)token {
+    [[PFUser currentUser] setObject:token forKey:@"instagram"];
 }
 
 @end
