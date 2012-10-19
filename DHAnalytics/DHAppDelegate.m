@@ -11,6 +11,9 @@
 #define TEST_FLIGHT_TEAM_TOKEN @"d8441f4ecdeedfda73e230bf1a2511e7_MTQ1MjkzMjAxMi0xMC0xOSAwMzowNzowOC45MzczODc"
 #define PARSE_APP_ID @"G1rjWspxnoeF72Qxf6LddyhHqEzlaY51cMuq66TR"
 #define PARSE_KEY @"yc4lJvF4VoRFDdD6g6qcAYBLGugq6TGWjWeSnDUp"
+#define GAN_TRACKING_ID @"UA-35695361-1"
+
+static const NSInteger kGANDispatchPeriodSec = 10;
 
 @implementation DHAppDelegate
 
@@ -19,6 +22,7 @@
     [Parse setApplicationId:PARSE_APP_ID
                   clientKey:PARSE_KEY];
     [TestFlight takeOff:TEST_FLIGHT_TEAM_TOKEN];
+    [[GANTracker sharedTracker] startTrackerWithAccountID:GAN_TRACKING_ID dispatchPeriod:kGANDispatchPeriodSec delegate:nil];
     return YES;
 }
 							

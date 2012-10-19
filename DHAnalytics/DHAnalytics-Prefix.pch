@@ -13,4 +13,5 @@
     #import <Foundation/Foundation.h>
     #import "TestFlight.h"
     #import <Parse/Parse.h>
+    #import "GANTracker.h"
 #endif

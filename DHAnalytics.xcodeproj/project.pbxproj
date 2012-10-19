@@ -41,6 +41,9 @@
 		4B98608F1631332700EB1109 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B98608D1631332700EB1109 /* libTestFlight.a */; };
 		4B9860911631343800EB1109 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9860901631343800EB1109 /* libz.dylib */; };
 		4B9860921631344C00EB1109 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B98608D1631332700EB1109 /* libTestFlight.a */; };
+		4B986095163134C700EB1109 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B986094163134C700EB1109 /* libGoogleAnalytics.a */; };
+		4B986096163134CC00EB1109 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B986094163134C700EB1109 /* libGoogleAnalytics.a */; };
+		4B986097163134D100EB1109 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9860901631343800EB1109 /* libz.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +96,8 @@
 		4B98608D1631332700EB1109 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		4B98608E1631332700EB1109 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		4B9860901631343800EB1109 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		4B986093163134C700EB1109 /* GANTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GANTracker.h; sourceTree = "<group>"; };
+		4B986094163134C700EB1109 /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +124,7 @@
 				4B986038163130A200EB1109 /* Foundation.framework in Frameworks */,
 				4B98603A163130A200EB1109 /* CoreGraphics.framework in Frameworks */,
 				4B986071163130D700EB1109 /* Parse.framework in Frameworks */,
+				4B986096163134CC00EB1109 /* libGoogleAnalytics.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +137,8 @@
 				4B98605C163130A200EB1109 /* Foundation.framework in Frameworks */,
 				4B986072163130D700EB1109 /* Parse.framework in Frameworks */,
 				4B98608F1631332700EB1109 /* libTestFlight.a in Frameworks */,
+				4B986095163134C700EB1109 /* libGoogleAnalytics.a in Frameworks */,
+				4B986097163134D100EB1109 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +167,8 @@
 		4B986034163130A200EB1109 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4B986093163134C700EB1109 /* GANTracker.h */,
+				4B986094163134C700EB1109 /* libGoogleAnalytics.a */,
 				4B9860901631343800EB1109 /* libz.dylib */,
 				4B98608D1631332700EB1109 /* libTestFlight.a */,
 				4B98608E1631332700EB1109 /* TestFlight.h */,
