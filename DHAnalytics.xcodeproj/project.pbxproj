@@ -39,6 +39,8 @@
 		4B98608A163131F200EB1109 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B986089163131F200EB1109 /* StoreKit.framework */; };
 		4B98608C163131F800EB1109 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B98608B163131F800EB1109 /* SystemConfiguration.framework */; };
 		4B98608F1631332700EB1109 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B98608D1631332700EB1109 /* libTestFlight.a */; };
+		4B9860911631343800EB1109 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9860901631343800EB1109 /* libz.dylib */; };
+		4B9860921631344C00EB1109 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B98608D1631332700EB1109 /* libTestFlight.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,7 @@
 		4B98608B163131F800EB1109 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4B98608D1631332700EB1109 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		4B98608E1631332700EB1109 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		4B9860901631343800EB1109 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B9860921631344C00EB1109 /* libTestFlight.a in Frameworks */,
+				4B9860911631343800EB1109 /* libz.dylib in Frameworks */,
 				4B98608C163131F800EB1109 /* SystemConfiguration.framework in Frameworks */,
 				4B98608A163131F200EB1109 /* StoreKit.framework in Frameworks */,
 				4B986088163131EC00EB1109 /* Social.framework in Frameworks */,
@@ -154,6 +159,7 @@
 		4B986034163130A200EB1109 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4B9860901631343800EB1109 /* libz.dylib */,
 				4B98608D1631332700EB1109 /* libTestFlight.a */,
 				4B98608E1631332700EB1109 /* TestFlight.h */,
 				4B98608B163131F800EB1109 /* SystemConfiguration.framework */,
@@ -446,6 +452,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DHAnalytics/DHAnalytics-Prefix.pch";
 				INFOPLIST_FILE = "DHAnalytics/DHAnalytics-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -461,6 +471,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DHAnalytics/DHAnalytics-Prefix.pch";
 				INFOPLIST_FILE = "DHAnalytics/DHAnalytics-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

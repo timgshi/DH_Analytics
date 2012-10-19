@@ -8,11 +8,17 @@
 
 #import "DHAppDelegate.h"
 
+#define TEST_FLIGHT_TEAM_TOKEN @"d8441f4ecdeedfda73e230bf1a2511e7_MTQ1MjkzMjAxMi0xMC0xOSAwMzowNzowOC45MzczODc"
+#define PARSE_APP_ID @"G1rjWspxnoeF72Qxf6LddyhHqEzlaY51cMuq66TR"
+#define PARSE_KEY @"yc4lJvF4VoRFDdD6g6qcAYBLGugq6TGWjWeSnDUp"
+
 @implementation DHAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [Parse setApplicationId:PARSE_APP_ID
+                  clientKey:PARSE_KEY];
+    [TestFlight takeOff:TEST_FLIGHT_TEAM_TOKEN];
     return YES;
 }
 							
